@@ -1,0 +1,85 @@
+import React from 'react';
+import { portfolioData } from '../data';
+import { FiDownload, FiArrowRight } from 'react-icons/fi';
+
+const Hero = () => {
+  return (
+    <section id="home" className="section container" style={styles.hero}>
+      <div className="animate-fade-in" style={styles.content}>
+        <h2 style={styles.greeting}>Hello, I'm</h2>
+        <h1 style={styles.name}>{portfolioData.personalInfo.name}</h1>
+        <h3 style={styles.title}>{portfolioData.personalInfo.title}</h3>
+        <p style={styles.description}>
+          I craft beautiful, user-friendly digital experiences that bridge the gap between design and functionality.
+        </p>
+        
+        <div style={styles.btnGroup}>
+          <a href="#projects" className="btn btn-primary">
+            View My Work <FiArrowRight />
+          </a>
+          <a href="#contact" className="btn btn-outline">
+            Contact Me <FiArrowRight />
+          </a>
+        </div>
+      </div>
+
+      <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
+        {/* Profile Image with CSS enhancements */}
+        <div className="profile-img-container">
+          <img 
+            src="https://via.placeholder.com/300/141414/6366f1?text=DJ" 
+            alt="Dilanka Jayadewa" 
+            className="profile-img"
+            id="profile-picture"
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+const styles = {
+  hero: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    minHeight: '100vh',
+    gap: '50px',
+    flexWrap: 'wrap-reverse',
+  },
+  content: {
+    flex: '1',
+    minWidth: '300px',
+  },
+  greeting: {
+    color: 'var(--accent)',
+    fontSize: '1.2rem',
+    marginBottom: '10px',
+  },
+  name: {
+    fontSize: '4rem',
+    lineHeight: '1.1',
+    marginBottom: '10px',
+    background: 'linear-gradient(to right, #fff, #a1a1aa)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+  },
+  title: {
+    fontSize: '2rem',
+    color: 'var(--text-secondary)',
+    marginBottom: '20px',
+    fontWeight: '400',
+  },
+  description: {
+    fontSize: '1.1rem',
+    color: 'var(--text-secondary)',
+    marginBottom: '40px',
+    maxWidth: '500px',
+  },
+  btnGroup: {
+    display: 'flex',
+    gap: '20px',
+  }
+};
+
+export default Hero;
