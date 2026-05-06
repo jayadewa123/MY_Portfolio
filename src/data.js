@@ -81,6 +81,13 @@ export const portfolioData = {
       description: "Developed the core internship application workflow, allowing students to browse and apply for categorized internships, track their status, and manage interview schedules upon confirmation.",
       technologies: ["Spring Boot", "Java", "MySQL", "REST API"],
       link: "#"
+    },
+    {
+      id: 6,
+      title: "Smart Campus - Facilities & Assets Catalogue",
+      description: "Designed and implemented the administrative dashboard for managing campus facilities, including lecture halls and computer labs, enabling real-time resource visibility for students while ensuring robust data validation and asset tracking.",
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      link: "https://github.com/Nadulahatharasinghe/it3030-paf-2026-smart-campus-20"
     }
   ]
 };
