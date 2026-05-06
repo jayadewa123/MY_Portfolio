@@ -74,6 +74,13 @@ export const portfolioData = {
       description: "An automated testing suite for a Singlish translator application, ensuring accuracy and performance in linguistic conversions.",
       technologies: ["Python", "Automation", "Testing"],
       link: "https://github.com/jayadewa123/ITPM-Assignment1-Singlish-Translator-Automation"
+    },
+    {
+      id: 5,
+      title: "UniIntern - Student Module",
+      description: "Developed the core internship application workflow, allowing students to browse and apply for categorized internships, track their status, and manage interview schedules upon confirmation.",
+      technologies: ["Spring Boot", "Java", "MySQL", "REST API"],
+      link: "#"
     }
   ]
 };
