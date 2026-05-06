@@ -67,6 +67,13 @@ export const portfolioData = {
       description: "An interactive mobile application prototype highlighting intuitive navigation and clean design principles.",
       technologies: ["Android", "Java", "XML"],
       link: "#"
+    },
+    {
+      id: 4,
+      title: "Singlish Translator Automation",
+      description: "An automated testing suite for a Singlish translator application, ensuring accuracy and performance in linguistic conversions.",
+      technologies: ["Python", "Automation", "Testing"],
+      link: "https://github.com/jayadewa123/ITPM-Assignment1-Singlish-Translator-Automation"
     }
   ]
 };
