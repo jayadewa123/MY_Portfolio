@@ -8,6 +8,7 @@ export const portfolioData = {
     github: "https://github.com/jayadewa123",
     facebook: "https://facebook.com/Dilanka.Jayadewa",
     instagram: "https://instagram.com/Dilanka_jaya_official",
+    tiktok: "https://www.tiktok.com/@dilu_jayadewa",
     about: "Ayubowan! I am Dilanka Jayadewa, an Information Technology (BSc Hons) undergraduate at SLIIT. My passion lies in UI/UX Design and creating user-friendly digital experiences. Alongside design, I have a strong foundation in frontend and backend development (React, Node.js, Python, MongoDB). This combination allows me to not only design beautiful interfaces but also understand how to build them effectively. My goal is to continuously learn and contribute to building high-quality software that solves real-world problems.",
     education: [
       "BSc (Hons) in Information Technology - SLIIT",
@@ -34,12 +35,21 @@ export const portfolioData = {
       { name: "C++", desc: "Developing high-performance software and algorithms." },
       { name: "Spring Boot", desc: "Creating robust, enterprise-level Java backends." },
       { name: "MySQL", desc: "Designing and querying relational database schemas." },
+      { name: "Oracle SQL Developer", desc: "Managing and querying Oracle relational databases." },
+      { name: "pgAdmin4", desc: "Open-source management tool for PostgreSQL databases." },
       { name: "MEAN Stack", desc: "Full-stack development using Mongo, Express, Angular, Node." }
     ],
     tools: [
-      { name: "Android", desc: "Developing native mobile applications." },
-      { name: "Postman", desc: "Testing and documenting RESTful APIs." },
+      { name: "VS Code", desc: "Industry-standard code editor for modern development." },
+      { name: "Antigravity AI", desc: "AI-powered coding assistant for enhanced productivity." },
+      { name: "Cursor AI", desc: "AI-integrated code editor for seamless development." },
+      { name: "XML", desc: "Data structuring and Android layout design." },
+      { name: "Android Studio", desc: "Primary IDE for developing native Android applications." },
+      { name: "Docker Desktop", desc: "Containerization platform for developing and scaling apps." },
       { name: "GitHub", desc: "Version control and collaborative code management." },
+      { name: "RStudio", desc: "Integrated development environment for R statistical computing." },
+      { name: "Postman", desc: "Testing and documenting RESTful APIs." },
+      { name: "XAMPP", desc: "Local server environment for PHP and MySQL development." },
       { name: "Eclipse", desc: "Integrated development environment for Java projects." }
     ]
   },
@@ -52,6 +62,7 @@ export const portfolioData = {
       title: "E-Commerce Web App UI Design",
       description: "A modern, user-friendly e-commerce interface designed with a focus on seamless user experience and accessibility.",
       technologies: ["Figma", "React", "CSS"],
+      image: "/projects/ecommerce.png",
       link: "#"
     },
     {
@@ -59,6 +70,7 @@ export const portfolioData = {
       title: "University IT Project",
       description: "A full-stack web application built as part of the university curriculum, demonstrating backend data management and frontend integration.",
       technologies: ["HTML", "CSS", "PHP", "MySQL"],
+      image: "/projects/university.png",
       link: "#"
     },
     {
@@ -66,6 +78,7 @@ export const portfolioData = {
       title: "Mobile App Prototype",
       description: "An interactive mobile application prototype highlighting intuitive navigation and clean design principles.",
       technologies: ["Android", "Java", "XML"],
+      image: "/projects/mobile.png",
       link: "#"
     },
     {
@@ -73,6 +86,7 @@ export const portfolioData = {
       title: "Singlish Translator Automation",
       description: "An automated testing suite for a Singlish translator application, ensuring accuracy and performance in linguistic conversions.",
       technologies: ["Python", "Automation", "Testing"],
+      image: "/projects/automation.png",
       link: "https://github.com/jayadewa123/ITPM-Assignment1-Singlish-Translator-Automation"
     },
     {
@@ -80,6 +94,7 @@ export const portfolioData = {
       title: "UniIntern - Student Module",
       description: "Developed the core internship application workflow, allowing students to browse and apply for categorized internships, track their status, and manage interview schedules upon confirmation.",
       technologies: ["Spring Boot", "Java", "MySQL", "REST API"],
+      image: "/projects/uniintern.png",
       link: "#"
     },
     {
@@ -87,6 +102,7 @@ export const portfolioData = {
       title: "Smart Campus - Facilities & Assets Catalogue",
       description: "Designed and implemented the administrative dashboard for managing campus facilities, including lecture halls and computer labs, enabling real-time resource visibility for students while ensuring robust data validation and asset tracking.",
       technologies: ["React", "Node.js", "MongoDB", "Express"],
+      image: "/projects/smartcampus.png",
       link: "https://github.com/Nadulahatharasinghe/it3030-paf-2026-smart-campus-20"
     }
   ]

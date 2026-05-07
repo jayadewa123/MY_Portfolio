@@ -18,25 +18,32 @@ const CircularProgress = ({ percentage, text }) => {
     <div className="circular-progress">
       <div className="svg-wrapper">
         <svg width="90" height="90">
+          {/* Background Track */}
           <circle 
             cx="45" cy="45" r={radius} 
             fill="transparent" 
-            stroke="rgba(255,255,255,0.05)" 
+            stroke="rgba(255,255,255,0.03)" 
             strokeWidth="8" 
           />
+          {/* Progress Circle with Glow */}
           <circle 
             cx="45" cy="45" r={radius} 
             fill="transparent" 
             stroke="var(--accent)" 
             strokeWidth="8" 
             strokeDasharray={circumference} 
-            strokeDashoffset={offset === 0 ? circumference : offset}
+            strokeDashoffset={offset}
             strokeLinecap="round"
-            style={{ transition: 'stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1)' }}
+            style={{ 
+              transition: 'stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1)',
+              filter: 'drop-shadow(0 0 5px var(--accent-glow))' 
+            }}
             transform="rotate(-90 45 45)"
           />
         </svg>
-        <div className="progress-value">{percentage}%</div>
+        <div className="progress-value" style={{ textShadow: '0 0 10px var(--accent-glow)' }}>
+          {percentage}%
+        </div>
       </div>
       <div className="progress-text">{text}</div>
     </div>

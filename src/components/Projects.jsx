@@ -10,6 +10,9 @@ const Projects = () => {
       <div style={styles.grid}>
         {portfolioData.projects.map(project => (
           <div key={project.id} style={styles.card} className="project-card">
+            <div style={styles.imageContainer}>
+              <img src={project.image} alt={project.title} style={styles.image} />
+            </div>
             <div style={styles.cardContent}>
               <h3 style={styles.title}>{project.title}</h3>
               <p style={styles.description}>{project.description}</p>
@@ -47,6 +50,18 @@ const styles = {
   },
   cardContent: {
     padding: '30px',
+  },
+  imageContainer: {
+    width: '100%',
+    height: '200px',
+    overflow: 'hidden',
+    borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    transition: 'transform 0.5s ease',
   },
   title: {
     fontSize: '1.5rem',

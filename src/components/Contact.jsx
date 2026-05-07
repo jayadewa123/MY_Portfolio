@@ -1,6 +1,7 @@
 import React from 'react';
 import { portfolioData } from '../data';
 import { FiMail, FiPhone, FiLinkedin, FiGithub, FiFacebook, FiInstagram } from 'react-icons/fi';
+import { SiTiktok } from 'react-icons/si';
 
 const Contact = () => {
   return (
@@ -60,6 +61,14 @@ const Contact = () => {
               <p style={styles.cardText}>Dilanka jaya official</p>
             </div>
           </a>
+
+          <a href={portfolioData.personalInfo.tiktok} target="_blank" rel="noreferrer" style={styles.linkCard} className="contact-card">
+            <div style={styles.iconBox}><SiTiktok size={24} /></div>
+            <div>
+              <h4 style={styles.cardTitle}>TikTok</h4>
+              <p style={styles.cardText}>Dilu Jayadewa</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -73,7 +82,7 @@ const styles = {
     textAlign: 'center',
   },
   text: {
-    color: '#1e293b',
+    color: 'var(--text-secondary)',
     fontSize: '1.1rem',
     marginBottom: '50px',
     fontWeight: '500',

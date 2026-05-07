@@ -1,9 +1,11 @@
 import React from 'react';
 import Navbar from './Navbar';
+import MeshBackground from './MeshBackground';
 
 const PageLayout = ({ children }) => {
   return (
     <div className="portfolio-page">
+      <MeshBackground />
       <div className="portfolio-content">
         <Navbar />
         <main style={{ marginTop: '100px', minHeight: 'calc(100vh - 200px)' }}>

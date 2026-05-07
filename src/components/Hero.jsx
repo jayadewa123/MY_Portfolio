@@ -27,10 +27,14 @@ const Hero = () => {
         {/* Profile Image with CSS enhancements */}
         <div className="profile-img-container">
           <img 
-            src="https://via.placeholder.com/300/141414/6366f1?text=DJ" 
+            src="/profile.jpg" 
             alt="Dilanka Jayadewa" 
             className="profile-img"
             id="profile-picture"
+            onError={(e) => {
+              e.target.onerror = null;
+              e.target.src = "https://via.placeholder.com/300/141414/6366f1?text=DJ";
+            }}
           />
         </div>
       </div>

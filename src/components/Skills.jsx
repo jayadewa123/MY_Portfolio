@@ -3,8 +3,11 @@ import { portfolioData } from '../data';
 import { 
   SiFigma, SiHtml5, SiCss, SiJavascript, SiReact, 
   SiNodedotjs, SiPhp, SiMongodb, SiPython, SiCplusplus, 
-  SiAndroid, SiPostman, SiGithub, SiEclipseide, SiSpringboot, SiMysql, SiAngular
+  SiAndroid, SiPostman, SiGithub, SiEclipseide, SiSpringboot, SiMysql, SiAngular,
+  SiAndroidstudio, SiDocker, SiRstudioide, SiXampp, SiPostgresql, SiXml, SiProbot, SiOpenai
 } from 'react-icons/si';
+import { GrOracle } from 'react-icons/gr';
+import { VscVscode } from 'react-icons/vsc';
 
 // Helper function to map skill names to icons
 const getIcon = (skillName) => {
@@ -23,6 +26,16 @@ const getIcon = (skillName) => {
     case 'spring boot': return <SiSpringboot {...iconProps} color="#6DB33F" />;
     case 'mysql': return <SiMysql {...iconProps} color="#4479A1" />;
     case 'mean stack': return <SiAngular {...iconProps} color="#DD0031" />;
+    case 'vs code': return <VscVscode {...iconProps} color="#007ACC" />;
+    case 'antigravity ai': return <SiProbot {...iconProps} color="#2dd4bf" />;
+    case 'cursor ai': return <SiOpenai {...iconProps} color="#74AA9C" />;
+    case 'xml': return <SiXml {...iconProps} color="#FFA500" />;
+    case 'android studio': return <SiAndroidstudio {...iconProps} color="#3DDC84" />;
+    case 'docker desktop': return <SiDocker {...iconProps} color="#2496ED" />;
+    case 'rstudio': return <SiRstudioide {...iconProps} color="#75AADB" />;
+    case 'pgadmin4': return <SiPostgresql {...iconProps} color="#336791" />;
+    case 'oracle sql developer': return <GrOracle {...iconProps} color="#F80000" />;
+    case 'xampp': return <SiXampp {...iconProps} color="#FB7A24" />;
     case 'android': return <SiAndroid {...iconProps} color="#3DDC84" />;
     case 'postman': return <SiPostman {...iconProps} color="#FF6C37" />;
     case 'github': return <SiGithub {...iconProps} color="#ffffff" />;

@@ -2,12 +2,14 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { portfolioData } from '../data';
 import Navbar from '../components/Navbar';
+import MeshBackground from '../components/MeshBackground';
 
 const Landing = () => {
   const navigate = useNavigate();
 
   return (
     <div className="landing-page">
+      <MeshBackground />
       <Navbar />
 
       {/* Main Hero Section */}
