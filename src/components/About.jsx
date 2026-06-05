@@ -1,130 +1,88 @@
-import React, { useEffect, useState } from 'react';
-import { portfolioData } from '../data';
-
-const CircularProgress = ({ percentage, text }) => {
-  const [offset, setOffset] = useState(0);
-  const radius = 35;
-  const circumference = 2 * Math.PI * radius;
-
-  useEffect(() => {
-    const progressOffset = circumference - (percentage / 100) * circumference;
-    const timeout = setTimeout(() => {
-      setOffset(progressOffset);
-    }, 300);
-    return () => clearTimeout(timeout);
-  }, [percentage, circumference]);
-
-  return (
-    <div className="circular-progress">
-      <div className="svg-wrapper">
-        <svg width="90" height="90">
-          {/* Background Track */}
-          <circle 
-            cx="45" cy="45" r={radius} 
-            fill="transparent" 
-            stroke="rgba(255,255,255,0.03)" 
-            strokeWidth="8" 
-          />
-          {/* Progress Circle with Glow */}
-          <circle 
-            cx="45" cy="45" r={radius} 
-            fill="transparent" 
-            stroke="var(--accent)" 
-            strokeWidth="8" 
-            strokeDasharray={circumference} 
-            strokeDashoffset={offset}
-            strokeLinecap="round"
-            style={{ 
-              transition: 'stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1)',
-              filter: 'drop-shadow(0 0 5px var(--accent-glow))' 
-            }}
-            transform="rotate(-90 45 45)"
-          />
-        </svg>
-        <div className="progress-value" style={{ textShadow: '0 0 10px var(--accent-glow)' }}>
-          {percentage}%
-        </div>
-      </div>
-      <div className="progress-text">{text}</div>
-    </div>
-  );
-};
+import React from 'react';
 
 const About = () => {
-  const [techStats, setTechStats] = useState([]);
-
-  useEffect(() => {
-    const calculateTechProficiency = () => {
-      const techCounts = {};
-      let maxCount = 0;
-      
-      portfolioData.projects.forEach(project => {
-        project.technologies.forEach(tech => {
-          techCounts[tech] = (techCounts[tech] || 0) + 1;
-          if (techCounts[tech] > maxCount) maxCount = techCounts[tech];
-        });
-      });
-
-      const sortedTech = Object.keys(techCounts).sort((a, b) => techCounts[b] - techCounts[a]);
-      const topTech = sortedTech.slice(0, 4);
-
-      // Boost calculation slightly so it looks good on a portfolio
-      // E.g., if max used tech is 2, it gets 100%. If a tech is used 1 time, it gets 50% + 20% boost = 70%
-      const baseLine = Math.max(maxCount, 2); 
-
-      const calculated = topTech.map(tech => {
-        const rawPercent = Math.round((techCounts[tech] / baseLine) * 100);
-        // Add a slight boost to base percentage to make it look professional, maxing out at 100
-        const displayPercent = Math.min(100, rawPercent > 50 ? rawPercent : rawPercent + 25);
-        return { name: tech, percentage: displayPercent };
-      });
-      
-      setTechStats(calculated);
-    };
-
-    calculateTechProficiency();
-  }, []);
-
   return (
     <section id="about" className="section container about-section">
       <h2 className="section-title">About Me</h2>
       <p className="about-subtitle">Get to know me better</p>
-      
+
       <div className="about-grid">
-        {/* Left Column: Text & Stats */}
+        {/* Left Column: Text */}
         <div className="about-left">
           <h3 className="about-headline">Passionate Developer Creating Digital Solutions</h3>
-          
+
           <div className="about-text">
             <p>
-              Hi! I'm Dilanka Jayadewa, an Information Technology (BSc Hons) undergraduate at SLIIT. 
-              My passion lies in UI/UX Design and creating user-friendly digital experiences.
+              Hi! I'm Dilanka, a BSc (Hons) Information Technology undergraduate at SLIIT with a passion for full-stack web development. I enjoy transforming ideas into functional, user-friendly applications by combining both frontend and backend technologies.
             </p>
             <p>
-              Alongside design, I have a strong foundation in frontend and backend development 
-              (React, Node.js, Spring Boot, MEAN stack). This combination allows me to not only 
-              design beautiful interfaces but also understand how to build them effectively.
+              My technical background includes Java, Python, JavaScript, React, and Spring Boot, which I have used to develop web-based solutions and strengthen my understanding of modern software development practices. I also have exposure to UI/UX design with Figma and mobile application development using Android Studio.
             </p>
             <p>
-              My goal is to continuously learn and contribute to building high-quality software 
-              that solves real-world problems.
+              I am constantly learning and exploring new technologies to improve my skills as a developer. I am particularly interested in building scalable web applications, writing clean and maintainable code, and gaining industry experience through challenging projects and collaborative development environments.
             </p>
           </div>
         </div>
 
-        {/* Right Column: Dynamic Circular Progress */}
+        {/* Right Column: Key Highlights */}
         <div className="about-right">
-          <div className="skills-container">
-            <h4 className="skills-title">Technical Proficiency</h4>
-            <p className="skills-subtitle">Calculated dynamically from my projects</p>
-            <div className="circular-grid">
-              {techStats.map((tech, index) => (
-                <CircularProgress key={index} percentage={tech.percentage} text={tech.name} />
-              ))}
-            </div>
+          <div style={{
+            background: 'rgba(45, 67, 100, 0.3)',
+            backdropFilter: 'blur(12px)',
+            borderRadius: '20px',
+            border: '1px solid rgba(158, 103, 82, 0.2)',
+            padding: '40px',
+            width: '100%',
+            maxWidth: '450px',
+          }}>
+            <h4 style={{ color: '#FED7A5', fontSize: '1.6rem', fontWeight: '700', marginBottom: '8px' }}>
+              Highlights
+            </h4>
+            <p style={{ color: '#b0a89a', fontSize: '0.9rem', marginBottom: '35px' }}>
+              Key achievements & milestones
+            </p>
+
+            {[
+              { icon: '🚀', label: 'Projects Completed', value: '6+' },
+              { icon: '💻', label: 'Technologies Used', value: '15+' },
+              { icon: '🎓', label: 'Years of Learning', value: '3+' },
+              { icon: '📜', label: 'Certifications', value: '1' },
+            ].map((item, idx) => (
+              <div key={idx} className="highlight-row" style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '18px',
+                padding: '16px 20px',
+                borderRadius: '12px',
+                marginBottom: idx < 3 ? '12px' : '0',
+                background: 'rgba(158, 103, 82, 0.08)',
+                border: '1px solid rgba(158, 103, 82, 0.15)',
+                transition: 'all 0.3s ease',
+              }}>
+                <span style={{ fontSize: '1.8rem', lineHeight: 1 }}>{item.icon}</span>
+                <div style={{ flex: 1 }}>
+                  <p style={{ color: '#b0a89a', fontSize: '0.85rem', margin: 0 }}>{item.label}</p>
+                </div>
+                <span style={{
+                  color: '#FED7A5',
+                  fontSize: '1.6rem',
+                  fontWeight: '800',
+                  fontFamily: 'Outfit, sans-serif',
+                  textShadow: '0 0 15px rgba(158, 103, 82, 0.5)',
+                }}>{item.value}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
+
+      <style>{`
+        .highlight-row:hover {
+          background: rgba(158, 103, 82, 0.18) !important;
+          border-color: rgba(158, 103, 82, 0.4) !important;
+          transform: translateX(6px);
+        }
+      `}</style>
     </section>
   );
 };

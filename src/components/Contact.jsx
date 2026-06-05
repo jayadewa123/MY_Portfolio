@@ -1,13 +1,13 @@
 import React from 'react';
 import { portfolioData } from '../data';
-import { FiMail, FiPhone, FiLinkedin, FiGithub, FiFacebook, FiInstagram } from 'react-icons/fi';
+import { FiMail, FiPhone, FiLinkedin, FiGithub, FiFacebook, FiInstagram, FiHome } from 'react-icons/fi';
 import { SiTiktok } from 'react-icons/si';
 
 const Contact = () => {
   return (
     <section id="contact" className="section container">
       <h2 className="section-title">Get In Touch</h2>
-      
+
       <div style={styles.contactWrapper}>
         <p style={styles.text}>
           I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
@@ -30,6 +30,14 @@ const Contact = () => {
             </div>
           </a>
 
+          <a href={`tel:${portfolioData.personalInfo.Location}`} style={styles.linkCard} className="contact-card">
+            <div style={styles.iconBox}><FiHome size={24} /></div>
+            <div>
+              <h4 style={styles.cardTitle}>Location</h4>
+              <p style={styles.cardText}>Avissawella, SriLanka</p>
+            </div>
+          </a>
+
           <a href={portfolioData.personalInfo.linkedin} target="_blank" rel="noreferrer" style={styles.linkCard} className="contact-card">
             <div style={styles.iconBox}><FiLinkedin size={24} /></div>
             <div>
@@ -43,30 +51,6 @@ const Contact = () => {
             <div>
               <h4 style={styles.cardTitle}>GitHub</h4>
               <p style={styles.cardText}>jayadewa123</p>
-            </div>
-          </a>
-
-          <a href={portfolioData.personalInfo.facebook} target="_blank" rel="noreferrer" style={styles.linkCard} className="contact-card">
-            <div style={styles.iconBox}><FiFacebook size={24} /></div>
-            <div>
-              <h4 style={styles.cardTitle}>Facebook</h4>
-              <p style={styles.cardText}>Dilanka Jayadewa</p>
-            </div>
-          </a>
-
-          <a href={portfolioData.personalInfo.instagram} target="_blank" rel="noreferrer" style={styles.linkCard} className="contact-card">
-            <div style={styles.iconBox}><FiInstagram size={24} /></div>
-            <div>
-              <h4 style={styles.cardTitle}>Instagram</h4>
-              <p style={styles.cardText}>Dilanka jaya official</p>
-            </div>
-          </a>
-
-          <a href={portfolioData.personalInfo.tiktok} target="_blank" rel="noreferrer" style={styles.linkCard} className="contact-card">
-            <div style={styles.iconBox}><SiTiktok size={24} /></div>
-            <div>
-              <h4 style={styles.cardTitle}>TikTok</h4>
-              <p style={styles.cardText}>Dilu Jayadewa</p>
             </div>
           </a>
         </div>

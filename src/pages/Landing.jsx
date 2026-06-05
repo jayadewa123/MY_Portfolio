@@ -19,7 +19,7 @@ const Landing = () => {
           <h1 className="hero-name">{portfolioData.personalInfo.name}</h1>
           <h2 className="hero-title">{portfolioData.personalInfo.title}</h2>
           <p className="hero-description">
-            Innovating at the intersection of design and technology to create meaningful solutions.
+            Transforming ideas into functional, user-friendly applications by combining frontend and backend technologies. I specialize in building scalable, robust web solutions that prioritize performance and clean design. Driven by a passion for continuous learning, I strive to deliver impactful software that meets industry standards and exceeds user expectations.
           </p>
           
           <div className="hero-buttons">
@@ -33,16 +33,27 @@ const Landing = () => {
         </div>
 
         <div className="landing-image-content">
-          <div className="hero-image-wrapper">
-            {/* We link profile.jpg here. The user must save their image as profile.jpg in public folder */}
+          <div style={{
+            width: '550px',
+            height: 'auto',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'flex-end',
+            position: 'relative',
+          }}>
             <img 
-              src="/profile.jpg" 
+              src="/profile.png" 
               alt={portfolioData.personalInfo.name} 
-              className="hero-image"
+              style={{
+                width: '100%',
+                height: 'auto',
+                objectFit: 'contain',
+                display: 'block',
+                filter: 'drop-shadow(0 0 20px rgba(45, 212, 191, 0.4))'
+              }}
               onError={(e) => {
                 e.target.onerror = null;
-                // Fallback realistic placeholder if profile.jpg is missing
-                e.target.src = "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80";
+                e.target.src = "https://via.placeholder.com/300/141414/6366f1?text=DJ";
               }}
             />
           </div>

@@ -1,7 +1,7 @@
 export const portfolioData = {
   personalInfo: {
     name: "Dilanka Jayadewa",
-    title: "Aspiring UI/UX Designer & Developer",
+    title: "Full-Stack Web Developer",
     email: "dilankajayadewa@gmail.com",
     phone: "0768044382",
     linkedin: "https://www.linkedin.com/in/dilanka-jayadewa-263886241/",

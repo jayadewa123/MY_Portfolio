@@ -12,7 +12,7 @@ const Hero = () => {
         <p style={styles.description}>
           I craft beautiful, user-friendly digital experiences that bridge the gap between design and functionality.
         </p>
-        
+
         <div style={styles.btnGroup}>
           <a href="#projects" className="btn btn-primary">
             View My Work <FiArrowRight />
@@ -23,13 +23,26 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="animate-fade-in" style={{animationDelay: '0.2s'}}>
+      <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
         {/* Profile Image with CSS enhancements */}
-        <div className="profile-img-container">
-          <img 
-            src="/profile.jpg" 
-            alt="Dilanka Jayadewa" 
-            className="profile-img"
+        <div style={{
+          width: '350px',
+          height: 'auto',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'flex-end',
+          position: 'relative',
+        }}>
+          <img
+            src="/profile.png"
+            alt="Dilanka Jayadewa"
+            style={{
+              width: '100%',
+              height: 'auto',
+              objectFit: 'contain',
+              display: 'block',
+              filter: 'drop-shadow(0 0 20px rgba(45, 212, 191, 0.4))'
+            }}
             id="profile-picture"
             onError={(e) => {
               e.target.onerror = null;

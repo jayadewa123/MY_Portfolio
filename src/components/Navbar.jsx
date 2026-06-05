@@ -35,6 +35,9 @@ const Navbar = () => {
           <Link to="/about" className={location.pathname === '/about' ? 'active-link' : ''} style={{ textDecoration: 'none' }}>About</Link>
         </li>
         <li>
+          <Link to="/experience" className={location.pathname === '/experience' ? 'active-link' : ''} style={{ textDecoration: 'none' }}>Experience</Link>
+        </li>
+        <li>
           <Link to="/skills" className={location.pathname === '/skills' ? 'active-link' : ''} style={{ textDecoration: 'none' }}>Skills</Link>
         </li>
         <li>
