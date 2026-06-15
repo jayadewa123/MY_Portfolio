@@ -59,7 +59,7 @@ ul {
   font-weight: 800;
   margin-bottom: 50px;
   text-align: center;
-  background: linear-gradient(135deg, #84e7f6, #dbbed8);
+  background: linear-gradient(135deg, #84e7f6, #e161d2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -142,7 +142,7 @@ ul {
   width: 100%;
   background: rgba(6, 11, 36, 0.85);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+  border-bottom: 1px solid rgba(148, 215, 244, 0.15);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -207,13 +207,13 @@ ul {
   margin-bottom: 30px;
   letter-spacing: 1px;
   background: linear-gradient(105deg,
-      #a78bfa 20%,
-      #818cf8 30%,
+      #7f5aef 20%,
+      #394dfd 30%,
       #d8f0ff 48%,
       #ffffff 55%,
       #d8f0ff 70%,
-      #38bdf8 90%,
-      #a78bfa 100%);
+      #14abec 90%,
+      #6c3cfb 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -237,7 +237,7 @@ ul {
   }
 
   100% {
-    filter: drop-shadow(0 0 28px rgba(167, 139, 250, 0.8)) drop-shadow(0 0 55px rgba(56, 189, 248, 0.45));
+    filter: drop-shadow(0 0 28px rgba(146, 113, 245, 0.8)) drop-shadow(0 0 55px rgba(34, 184, 249, 0.45));
   }
 }
 
@@ -255,7 +255,7 @@ ul {
 }
 
 .hero-btn-primary {
-  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  background: linear-gradient(135deg, #18aeef, #0d10ca);
   color: #ffffff;
   border-radius: 8px;
   padding: 12px 30px;
@@ -273,7 +273,7 @@ ul {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #6366f1, #38bdf8);
+  background: linear-gradient(135deg, #3f42e6, #27b2ee);
   opacity: 0;
   transition: opacity 0.4s ease;
   border-radius: 8px;
@@ -491,11 +491,11 @@ ul {
 .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: #818cf8;
+  color: #5061fb;
   /* Lighter Indigo (Indigo 400) */
   font-family: 'Outfit', sans-serif;
   line-height: 1;
-  text-shadow: 0 0 20px rgba(129, 140, 248, 0.3);
+  text-shadow: 0 0 20px rgba(98, 112, 244, 0.3);
 }
 
 .stat-label {
