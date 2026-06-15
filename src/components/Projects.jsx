@@ -24,8 +24,16 @@ const Projects = () => {
               </div>
               
               <div style={styles.links}>
-                <a href={project.link} style={styles.iconLink}><FiGithub /> Code</a>
-                <a href={project.link} style={styles.iconLink}><FiExternalLink /> Live</a>
+                {project.link && project.link !== "#" && (
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
+                    <FiGithub /> GitHub
+                  </a>
+                )}
+                {project.liveLink && (
+                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" style={styles.iconLink}>
+                    <FiExternalLink /> Live Demo
+                  </a>
+                )}
               </div>
             </div>
           </div>

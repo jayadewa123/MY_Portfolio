@@ -27,18 +27,18 @@ const About = () => {
         {/* Right Column: Key Highlights */}
         <div className="about-right">
           <div style={{
-            background: 'rgba(45, 67, 100, 0.3)',
+            background: 'var(--bg-glass)',
             backdropFilter: 'blur(12px)',
             borderRadius: '20px',
-            border: '1px solid rgba(158, 103, 82, 0.2)',
+            border: '1px solid rgba(56, 189, 248, 0.2)',
             padding: '40px',
             width: '100%',
             maxWidth: '450px',
           }}>
-            <h4 style={{ color: '#FED7A5', fontSize: '1.6rem', fontWeight: '700', marginBottom: '8px' }}>
+            <h4 style={{ color: 'var(--text-primary)', fontSize: '1.6rem', fontWeight: '700', marginBottom: '8px' }}>
               Highlights
             </h4>
-            <p style={{ color: '#b0a89a', fontSize: '0.9rem', marginBottom: '35px' }}>
+            <p style={{ color: 'var(--text-secondary)', fontSize: '0.9rem', marginBottom: '35px' }}>
               Key achievements & milestones
             </p>
 
@@ -55,20 +55,20 @@ const About = () => {
                 padding: '16px 20px',
                 borderRadius: '12px',
                 marginBottom: idx < 3 ? '12px' : '0',
-                background: 'rgba(158, 103, 82, 0.08)',
-                border: '1px solid rgba(158, 103, 82, 0.15)',
+                background: 'rgba(56, 189, 248, 0.08)',
+                border: '1px solid rgba(56, 189, 248, 0.15)',
                 transition: 'all 0.3s ease',
               }}>
                 <span style={{ fontSize: '1.8rem', lineHeight: 1 }}>{item.icon}</span>
                 <div style={{ flex: 1 }}>
-                  <p style={{ color: '#b0a89a', fontSize: '0.85rem', margin: 0 }}>{item.label}</p>
+                  <p style={{ color: 'var(--text-secondary)', fontSize: '0.85rem', margin: 0 }}>{item.label}</p>
                 </div>
                 <span style={{
-                  color: '#FED7A5',
+                  color: 'var(--accent)',
                   fontSize: '1.6rem',
                   fontWeight: '800',
                   fontFamily: 'Outfit, sans-serif',
-                  textShadow: '0 0 15px rgba(158, 103, 82, 0.5)',
+                  textShadow: '0 0 15px rgba(56, 189, 248, 0.4)',
                 }}>{item.value}</span>
               </div>
             ))}
@@ -78,8 +78,8 @@ const About = () => {
 
       <style>{`
         .highlight-row:hover {
-          background: rgba(158, 103, 82, 0.18) !important;
-          border-color: rgba(158, 103, 82, 0.4) !important;
+          background: rgba(56, 189, 248, 0.18) !important;
+          border-color: rgba(56, 189, 248, 0.4) !important;
           transform: translateX(6px);
         }
       `}</style>

@@ -24,7 +24,7 @@ const education = [
     field: 'Specializing in Information Technology',
     period: '2023 - Present',
     status: 'Undergraduate',
-    color: '#9E6752',
+    color: '#38BDF8',
   },
   {
     id: 2,
@@ -120,16 +120,16 @@ const ExperiencePage = () => {
 
       <style>{`
         .exp-card {
-          background: rgba(45, 67, 100, 0.3);
+          background: var(--bg-glass);
           backdrop-filter: blur(10px);
           border-radius: 16px;
-          border: 1px solid rgba(158, 103, 82, 0.2);
+          border: 1px solid rgba(56, 189, 248, 0.2);
           padding: 30px 35px;
           transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .exp-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 15px 40px rgba(158, 103, 82, 0.2);
+          box-shadow: 0 15px 40px rgba(56, 189, 248, 0.15);
         }
         .timeline-item-anim {
           animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
@@ -154,13 +154,13 @@ const styles = {
   sectionLine: {
     flex: 1,
     height: '1px',
-    background: 'linear-gradient(to right, transparent, rgba(158, 103, 82, 0.5), transparent)',
+    background: 'linear-gradient(to right, transparent, rgba(56, 189, 248, 0.5), transparent)',
     display: 'block',
   },
   timeline: {
     position: 'relative',
     paddingLeft: '40px',
-    borderLeft: '2px dashed rgba(158, 103, 82, 0.3)',
+    borderLeft: '2px dashed rgba(56, 189, 248, 0.3)',
     display: 'flex',
     flexDirection: 'column',
     gap: '30px',
@@ -197,7 +197,7 @@ const styles = {
     fontWeight: '500',
   },
   cardField: {
-    color: '#DFB6B2',
+    color: 'var(--accent)',
     fontSize: '0.9rem',
     margin: 0,
     opacity: 0.8,

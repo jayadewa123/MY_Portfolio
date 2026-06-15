@@ -25,6 +25,7 @@ export const portfolioData = {
       { name: "HTML", desc: "Structuring semantic and accessible web content." },
       { name: "CSS", desc: "Styling responsive and modern web layouts." },
       { name: "JavaScript", desc: "Adding interactivity and dynamic logic to web pages." },
+      { name: "Java", desc: "Adding web pages." },
       { name: "React", desc: "Building dynamic, component-based user interfaces." }
     ],
     backend: [
@@ -59,51 +60,67 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "E-Commerce Web App UI Design",
-      description: "A modern, user-friendly e-commerce interface designed with a focus on seamless user experience and accessibility.",
-      technologies: ["Figma", "React", "CSS"],
-      image: "/projects/ecommerce.png",
-      link: "#"
+      title: "UniIntern - University Student Internship Platform",
+      description: "A full-stack web application developed to streamline the university internship recruitment process, allowing students to apply for internship opportunities, track their application status, and manage interview schedules while connecting with potential employers.",
+      technologies: ["React", "SpringBoot", "Java", "PostgreSQL", "REST API", "Node.js", "HTML", "CSS"],
+      image: "/projects/uniintern.png",
+      link: "https://github.com/JVliyanarachchi21/uniintern/tree/feature/student"
     },
     {
       id: 2,
-      title: "University IT Project",
-      description: "A full-stack web application built as part of the university curriculum, demonstrating backend data management and frontend integration.",
-      technologies: ["HTML", "CSS", "PHP", "MySQL"],
-      image: "/projects/university.png",
-      link: "#"
+      title: "CoreGride(Smart Campus) - Facilities & Assets Catalogue",
+      description: "Designed and implemented the administrative dashboard for managing campus facilities, including lecture halls and computer labs, enabling real-time resource visibility for students while ensuring robust data validation and asset tracking.",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "SpringBoot", "Java", "JavaScript"],
+      image: "/projects/smartcampus.png",
+      link: "https://github.com/Nadulahatharasinghe/it3030-paf-2026-smart-campus-20/tree/feature/module-a-facilities-assets-catalogue"
     },
     {
       id: 3,
-      title: "Mobile App Prototype",
-      description: "An interactive mobile application prototype highlighting intuitive navigation and clean design principles.",
-      technologies: ["Android", "Java", "XML"],
-      image: "/projects/mobile.png",
-      link: "#"
+      title: "OnlineTourGuide - Tour Guide Booking Platform",
+      description: "A full-stack web application designed to simplify tour guide management and booking processes. The platform enables users to browse available guides, create bookings, manage schedules, and maintain profiles while implementing CRUD operations with a structured MVC architecture.",
+      technologies: ["MEAN Stack", "Java", "MySQL", "CSS", "HTML"],
+      image: "/projects/onlineTour.PNG",
+      link: "https://github.com/jayadewa123/Online-Tour-Guide"
     },
     {
       id: 4,
-      title: "Singlish Translator Automation",
-      description: "An automated testing suite for a Singlish translator application, ensuring accuracy and performance in linguistic conversions.",
-      technologies: ["Python", "Automation", "Testing"],
-      image: "/projects/automation.png",
-      link: "https://github.com/jayadewa123/ITPM-Assignment1-Singlish-Translator-Automation"
+      title: "FixItNow - Item Exchange Platform",
+      description: "A full-stack maintenance management platform that connects clients, administrators, and technicians. The system enables users to submit maintenance requests, track request details, and manage service workflows through an integrated platform.",
+      technologies: ["MEAN Stack", "JavaScript", "REST APIs", "Postman", "HTML", "CSS"],
+      image: "/projects/fixltNow.PNG",
+      link: "https://github.com/jayadewa123/FixltNow-App-"
     },
     {
       id: 5,
-      title: "UniIntern - Student Module",
-      description: "Developed the core internship application workflow, allowing students to browse and apply for categorized internships, track their status, and manage interview schedules upon confirmation.",
-      technologies: ["Spring Boot", "Java", "MySQL", "REST API"],
-      image: "/projects/uniintern.png",
+      title: "Baby Care - Baby shop and Booking Platform UI Design",
+      description: "A modern, user-friendly BabyCare interface designed with a focus on seamless user experience and accessibility.",
+      technologies: ["Figma"],
+      image: "/projects/babyCare.PNG",
       link: "#"
     },
     {
       id: 6,
-      title: "Smart Campus - Facilities & Assets Catalogue",
-      description: "Designed and implemented the administrative dashboard for managing campus facilities, including lecture halls and computer labs, enabling real-time resource visibility for students while ensuring robust data validation and asset tracking.",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
-      image: "/projects/smartcampus.png",
-      link: "https://github.com/Nadulahatharasinghe/it3030-paf-2026-smart-campus-20"
-    }
+      title: "DailyPulse - Habit Tracker Mobile Application",
+      description: "A mobile wellness tracking application developed to improve users' daily routines through habit monitoring, mood journaling, and hydration tracking. The application includes notification and widget support to provide personalized reminders and enhance user engagement.",
+      technologies: ["Android Studio(Kotlin)"],
+      image: "/projects/dailyroutin.PNG",
+      link: "https://github.com/jayadewa123/Daily-Routines_MAD_Y2S2"
+    },
+    {
+      id: 7,
+      title: "Movie Booking System - User Management Module",
+      description: "A web-based movie ticket booking system featuring user registration, login, profile management, and ticket booking functionalities. Built with secure session-based authentication and database integration using PHP and MySQL.",
+      technologies: ["HTML", "PHP", "MySQL", "CSS"],
+      image: "/projects/movieBooking.PNG",
+      link: "https://github.com/jayadewa123/Movie-Booking-System"
+    },
+    {
+      id: 8,
+      title: "Singlish Translator Automation",
+      description: "An automated testing suite for a Singlish translator application, ensuring accuracy and performance in linguistic conversions.",
+      technologies: ["Python", "Automation", "Testing"],
+      image: "/projects/translater.PNG",
+      link: "https://github.com/jayadewa123/ITPM-Assignment1-Singlish-Translator-Automation"
+    },
   ]
 };
