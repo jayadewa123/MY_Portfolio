@@ -6,15 +6,11 @@ export const portfolioData = {
     phone: "0768044382",
     linkedin: "https://www.linkedin.com/in/dilanka-jayadewa-263886241/",
     github: "https://github.com/jayadewa123",
-    facebook: "https://facebook.com/Dilanka.Jayadewa",
-    instagram: "https://instagram.com/Dilanka_jaya_official",
-    tiktok: "https://www.tiktok.com/@dilu_jayadewa",
     about: "Ayubowan! I am Dilanka Jayadewa, an Information Technology (BSc Hons) undergraduate at SLIIT. My passion lies in UI/UX Design and creating user-friendly digital experiences. Alongside design, I have a strong foundation in frontend and backend development (React, Node.js, Python, MongoDB). This combination allows me to not only design beautiful interfaces but also understand how to build them effectively. My goal is to continuously learn and contribute to building high-quality software that solves real-world problems.",
     education: [
       "BSc (Hons) in Information Technology - SLIIT",
       "G.C.E. Advanced Level Exam Passed",
-      "G.C.E. Ordinary Level Exam Passed",
-      "Completed Computer Courses"
+      "G.C.E. Ordinary Level Exam Passed"
     ]
   },
   skills: {
