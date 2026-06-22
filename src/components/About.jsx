@@ -43,8 +43,8 @@ const About = () => {
             </p>
 
             {[
-              { icon: '🚀', label: 'Projects Completed', value: '6+' },
-              { icon: '💻', label: 'Technologies Used', value: '15+' },
+              { icon: '🚀', label: 'Projects Completed', value: '7+' },
+              { icon: '💻', label: 'Technologies Used', value: '27+' },
               { icon: '🎓', label: 'Years of Learning', value: '3+' },
               { icon: '📜', label: 'Certifications', value: '1' },
             ].map((item, idx) => (
