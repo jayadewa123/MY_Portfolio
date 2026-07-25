@@ -12,8 +12,9 @@ const Contact = () => {
           I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
         </p>
 
-        {/* Three Cards Side by Side */}
-        <div style={styles.cardsGrid}>
+        {/* Main Box wrapping all cards */}
+        <div style={styles.mainContainer}>
+          <div style={styles.cardsGrid}>
 
           {/* Email Card */}
           <a
@@ -69,14 +70,8 @@ const Contact = () => {
           </a>
 
         </div>
-
-        {/* Note Box */}
-        <div style={styles.noteBox}>
-          <span style={styles.notePin}>📌</span>
-          <p style={styles.noteText}>
-            <strong>Note:</strong> Feel free to reach out via call or email for inquiries, collaborations, or job opportunities. I'm usually quick to respond!
-          </p>
         </div>
+
 
 
       </div>
@@ -98,10 +93,6 @@ const Contact = () => {
           transform: translateY(-3px) !important;
           box-shadow: 0 8px 25px rgba(56, 189, 248, 0.35) !important;
         }
-        @media (max-width: 768px) {
-          .cards-grid-responsive {
-            grid-template-columns: 1fr !important;
-          }
         }
       `}</style>
     </section>
@@ -123,12 +114,21 @@ const styles = {
     lineHeight: '1.7',
   },
 
-  /* ── Three cards in a row ── */
+  /* ── Main Container & Stacked Cards ── */
+  mainContainer: {
+    backgroundColor: 'rgba(255, 255, 255, 0.02)',
+    backdropFilter: 'blur(10px)',
+    border: '1px solid rgba(255, 255, 255, 0.05)',
+    borderRadius: '24px',
+    padding: '40px',
+    margin: '0 auto 40px auto',
+    maxWidth: '450px',
+    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)',
+  },
   cardsGrid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    gap: '24px',
-    marginBottom: '40px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '20px',
   },
   card: {
     display: 'flex',

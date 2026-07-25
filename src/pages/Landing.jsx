@@ -8,6 +8,7 @@ import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Experience from '../components/Experience';
+import Footer from '../components/Footer';
 import { portfolioData } from '../data';
 
 const Landing = () => {
@@ -182,9 +183,7 @@ const Landing = () => {
         <Contact />
       </main>
 
-      <footer style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--text-secondary)', borderTop: '1px solid rgba(255,255,255,0.05)', background: 'rgba(6, 11, 36, 0.8)' }}>
-        <p>© {new Date().getFullYear()} Dilanka Jayadewa. All rights reserved.</p>
-      </footer>
+      <Footer />
       <style>{`
         .blinking-cursor {
           animation: blink 1s step-end infinite;

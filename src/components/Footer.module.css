@@ -1,0 +1,125 @@
+.footerContainer {
+  background-color: #060b24; /* Very dark blue from theme */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary, #94a3b8);
+  padding: 60px 0 0 0;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 40px;
+}
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.brandName {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(to right, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.brandBio {
+  line-height: 1.6;
+  max-width: 350px;
+  font-size: 0.95rem;
+}
+
+.sectionTitle {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.sitemapList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sitemapList a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.sitemapList a:hover {
+  color: #38bdf8;
+}
+
+.footerSocials {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.socialIcons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.socialIcons a:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: rgba(56, 189, 248, 0.3);
+  color: #38bdf8;
+  transform: translateY(-3px);
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 25px 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.footerBottom p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .footerBrand {
+    align-items: center;
+  }
+
+  .brandBio {
+    max-width: 100%;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}
