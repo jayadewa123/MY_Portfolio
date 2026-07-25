@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+// import { TypeAnimation } from 'react-type-animation';
 import { useLocation } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import MeshBackground from '../components/MeshBackground';
@@ -11,6 +12,36 @@ import { portfolioData } from '../data';
 
 const Landing = () => {
   const location = useLocation();
+
+  const [currentText, setCurrentText] = useState('');
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  
+  useEffect(() => {
+    const words = ['Aspiring Software Engineer', portfolioData.personalInfo.title];
+    const targetWord = words[wordIndex];
+    let typingSpeed = isDeleting ? 30 : 80;
+    
+    if (!isDeleting && currentText === targetWord) {
+      const timeout = setTimeout(() => setIsDeleting(true), 2000);
+      return () => clearTimeout(timeout);
+    }
+    
+    if (isDeleting && currentText === '') {
+      setIsDeleting(false);
+      setWordIndex((prev) => (prev + 1) % words.length);
+      return;
+    }
+    
+    const timeout = setTimeout(() => {
+      setCurrentText(prev => 
+        isDeleting ? targetWord.substring(0, prev.length - 1) : targetWord.substring(0, prev.length + 1)
+      );
+    }, typingSpeed);
+    
+    return () => clearTimeout(timeout);
+  }, [currentText, isDeleting, wordIndex]);
+
 
   useEffect(() => {
     // Smooth scroll to section on initial load if route has a section name
@@ -36,7 +67,10 @@ const Landing = () => {
             <div className="landing-text-content">
               <p className="hello-text">Hello, I'm</p>
               <h1 className="hero-name">{portfolioData.personalInfo.name}</h1>
-              <h2 className="hero-title">{portfolioData.personalInfo.title}</h2>
+              <h2 className="hero-title" style={{ display: 'inline-block', minHeight: '1.2em' }}>
+                {currentText}
+                <span className="blinking-cursor">|</span>
+              </h2>
               <p className="hero-description">
                 Transforming ideas into functional, user-friendly applications by combining frontend and backend technologies. I specialize in building scalable, robust web solutions that prioritize performance and clean design. Driven by a passion for continuous learning, I strive to deliver impactful software that meets industry standards and exceeds user expectations.
               </p>
@@ -86,8 +120,9 @@ const Landing = () => {
 
                 {/* CV Download Icon */}
                 <a
-                  href="/Dilanka_Jayadewa_CV.pdf"
-                  download="Dilanka_Jayadewa_CV.pdf"
+                  href="/Dilanka_CV.pdf"
+                  target="_blank"
+                  rel="noreferrer"
                   className="social-icon-link cv-icon-link"
                   aria-label="Download CV"
                   title="Download CV"
@@ -150,6 +185,16 @@ const Landing = () => {
       <footer style={{ textAlign: 'center', padding: '40px 20px', color: 'var(--text-secondary)', borderTop: '1px solid rgba(255,255,255,0.05)', background: 'rgba(6, 11, 36, 0.8)' }}>
         <p>© {new Date().getFullYear()} Dilanka Jayadewa. All rights reserved.</p>
       </footer>
+      <style>{`
+        .blinking-cursor {
+          animation: blink 1s step-end infinite;
+          margin-left: 2px;
+          color: inherit;
+        }
+        @keyframes blink {
+          50% { opacity: 0; }
+        }
+      `}</style>
     </div>
   );
 };

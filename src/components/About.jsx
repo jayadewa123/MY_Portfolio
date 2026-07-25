@@ -1,4 +1,6 @@
 import React from 'react';
+import { FiDownload } from 'react-icons/fi';
+import './About.module.css';
 
 const About = () => {
   return (
@@ -73,6 +75,8 @@ const About = () => {
               </div>
             ))}
           </div>
+
+
         </div>
       </div>
 
