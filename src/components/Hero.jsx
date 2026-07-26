@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section id="home" className="section container" style={styles.hero}>
       <div className="animate-fade-in" style={styles.content}>
-        <h2 style={styles.greeting}>Hello, I'm</h2>
+        <h2 style={styles.greeting}>Hello, My Name Is</h2>
         <h1 style={styles.name}>{portfolioData.personalInfo.name}</h1>
         <h3 style={styles.title}>{portfolioData.personalInfo.title}</h3>
         <p style={styles.description}>
@@ -74,7 +74,8 @@ const styles = {
     marginBottom: '10px',
   },
   name: {
-    fontSize: '4rem',
+    fontSize: 'clamp(2.5rem, 5vw, 3.5rem)',
+    whiteSpace: 'nowrap',
     lineHeight: '1.1',
     marginBottom: '10px',
     background: 'linear-gradient(to right, #fff, #a1a1aa)',

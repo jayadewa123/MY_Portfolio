@@ -193,7 +193,8 @@ ul {
 }
 
 .hero-name {
-  font-size: 4.5rem;
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  white-space: nowrap;
   font-family: 'Outfit', serif;
   font-weight: 700;
   margin-bottom: 10px;
@@ -201,24 +202,24 @@ ul {
 }
 
 .hero-title {
-  font-size: 2.4rem;
+  font-size: inherit;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   margin-bottom: 30px;
   letter-spacing: 1px;
   background: linear-gradient(105deg,
-      #a78bfa 20%,
-      #818cf8 30%,
+      #8a66f8 20%,
+      #6978fb 30%,
       #d8f0ff 48%,
       #ffffff 55%,
-      #d8f0ff 70%,
+      #d8f5ff 70%,
       #38bdf8 90%,
-      #a78bfa 100%);
+      #8865f1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   background-size: 400% auto;
-  animation: glitterShimmer 3.5s linear infinite, glowPulse 2.5s ease-in-out infinite alternate;
+  animation: glitterShimmer 3.4s linear infinite, glowPulse 2.4s ease-in-out infinite alternate;
 }
 
 @keyframes glitterShimmer {
