@@ -60,6 +60,24 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
+      title: "Techloom POS System - Concurrency-Safe POS & Stock Lock Engine",
+      description: "A high-performance, concurrency-safe Point-of-Sale (POS) order & inventory system designed to prevent overselling under high concurrent demand. Features an automated 5-minute stock lock reservation engine (TTL), transactional integrity, and a mock payment gateway handling success, failure, and timeout outcomes.",
+      technologies: ["React", "Node.js", "Express", "Concurrency Control", "5-min TTL Lock", "REST API", "State Machine"],
+      image: "/projects/techloom-pos.png",
+      link: "https://github.com/jayadewa123/techloom-intern-assessment",
+      liveLink: "https://techloom-intern-assessment-x1yx.vercel.app/"
+    },
+    {
+      id: 2,
+      title: "Techloom Store - Next-Gen E-Commerce & Concurrency Payment Engine",
+      description: "A full-featured modern e-commerce storefront featuring dynamic product discovery, search, filtering, and a synchronized checkout pipeline. Implements pre-payment stock reservations, idempotent payment submissions (duplicate charge prevention), simulated refunds, and full order lifecycle management.",
+      technologies: ["React", "Node.js", "Express", "E-Commerce", "Payment Gateway Simulator", "Stock Reservation", "Order Lifecycle"],
+      image: "/projects/techloom-store.png",
+      link: "https://github.com/jayadewa123/techloom-intern-assessment",
+      liveLink: "https://techloom-intern-assessment-qks4.vercel.app/"
+    },
+    {
+      id: 3,
       title: "UniIntern - University Student Internship Platform",
       description: "A full-stack web application developed to streamline the university internship recruitment process, allowing students to apply for internship opportunities, track their application status, and manage interview schedules while connecting with potential employers.",
       technologies: ["React", "SpringBoot", "Java", "PostgreSQL", "REST API", "Node.js", "HTML", "CSS"],
@@ -67,7 +85,7 @@ export const portfolioData = {
       link: "https://github.com/JVliyanarachchi21/uniintern/tree/feature/student"
     },
     {
-      id: 2,
+      id: 4,
       title: "CoreGride(Smart Campus) - Facilities & Assets Catalogue",
       description: "Designed and implemented the administrative dashboard for managing campus facilities, including lecture halls and computer labs, enabling real-time resource visibility for students while ensuring robust data validation and asset tracking.",
       technologies: ["React", "Node.js", "MongoDB", "Express", "SpringBoot", "Java", "JavaScript"],
@@ -75,7 +93,7 @@ export const portfolioData = {
       link: "https://github.com/Nadulahatharasinghe/it3030-paf-2026-smart-campus-20/tree/feature/module-a-facilities-assets-catalogue"
     },
     {
-      id: 3,
+      id: 5,
       title: "OnlineTourGuide - Tour Guide Booking Platform",
       description: "A full-stack web application designed to simplify tour guide management and booking processes. The platform enables users to browse available guides, create bookings, manage schedules, and maintain profiles while implementing CRUD operations with a structured MVC architecture.",
       technologies: ["MEAN Stack", "Java", "MySQL", "CSS", "HTML"],
@@ -83,7 +101,7 @@ export const portfolioData = {
       link: "https://github.com/jayadewa123/Online-Tour-Guide"
     },
     {
-      id: 4,
+      id: 6,
       title: "FixItNow - Item Exchange Platform",
       description: "A full-stack maintenance management platform that connects clients, administrators, and technicians. The system enables users to submit maintenance requests, track request details, and manage service workflows through an integrated platform.",
       technologies: ["MEAN Stack", "JavaScript", "REST APIs", "Postman", "HTML", "CSS"],
@@ -91,7 +109,7 @@ export const portfolioData = {
       link: "https://github.com/jayadewa123/FixltNow-App-"
     },
     {
-      id: 5,
+      id: 7,
       title: "Baby Care - Baby shop and Booking Platform UI Design",
       description: "A modern, user-friendly BabyCare interface designed with a focus on seamless user experience and accessibility.",
       technologies: ["Figma"],
@@ -99,7 +117,7 @@ export const portfolioData = {
       link: "#"
     },
     {
-      id: 6,
+      id: 8,
       title: "DailyPulse - Habit Tracker Mobile Application",
       description: "A mobile wellness tracking application developed to improve users' daily routines through habit monitoring, mood journaling, and hydration tracking. The application includes notification and widget support to provide personalized reminders and enhance user engagement.",
       technologies: ["Android Studio(Kotlin)"],
@@ -107,7 +125,7 @@ export const portfolioData = {
       link: "https://github.com/jayadewa123/Daily-Routines_MAD_Y2S2"
     },
     {
-      id: 7,
+      id: 9,
       title: "Movie Booking System - User Management Module",
       description: "A web-based movie ticket booking system featuring user registration, login, profile management, and ticket booking functionalities. Built with secure session-based authentication and database integration using PHP and MySQL.",
       technologies: ["HTML", "PHP", "MySQL", "CSS"],
@@ -115,7 +133,7 @@ export const portfolioData = {
       link: "https://github.com/jayadewa123/Movie-Booking-System"
     },
     {
-      id: 8,
+      id: 10,
       title: "Singlish Translator Automation",
       description: "An automated testing suite for a Singlish translator application, ensuring accuracy and performance in linguistic conversions.",
       technologies: ["Python", "Automation", "Testing"],
