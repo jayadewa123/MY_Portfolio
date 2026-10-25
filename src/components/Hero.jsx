@@ -26,27 +26,42 @@ const Hero = () => {
       <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
         {/* Profile Image with CSS enhancements */}
         <div style={{
-          width: '350px',
-          height: 'auto',
+          width: '320px',
+          height: '320px',
+          maxWidth: '85vw',
+          maxHeight: '85vw',
+          borderRadius: '50%',
+          padding: '5px',
+          background: 'linear-gradient(135deg, rgba(45, 212, 191, 0.8), rgba(99, 102, 241, 0.5))',
+          boxShadow: '0 0 35px rgba(45, 212, 191, 0.35)',
           display: 'flex',
           justifyContent: 'center',
-          alignItems: 'flex-end',
+          alignItems: 'center',
+          overflow: 'hidden',
           position: 'relative',
+          margin: '0 auto',
         }}>
           <img
-            src="/profile.png"
+            src="/portfolio.png"
             alt="Dilanka Jayadewa"
             style={{
               width: '100%',
-              height: 'auto',
-              objectFit: 'contain',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center 12%',
+              borderRadius: '50%',
               display: 'block',
-              filter: 'drop-shadow(0 0 20px rgba(45, 212, 191, 0.4))'
             }}
             id="profile-picture"
             onError={(e) => {
-              e.target.onerror = null;
-              e.target.src = "https://via.placeholder.com/300/141414/6366f1?text=DJ";
+              if (e.target.src.includes('portfolio.png')) {
+                e.target.src = '/portpolio.png';
+              } else if (e.target.src.includes('portpolio.png')) {
+                e.target.src = '/Portfolio.png';
+              } else {
+                e.target.onerror = null;
+                e.target.src = '/profile.png';
+              }
             }}
           />
         </div>
